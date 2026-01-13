@@ -1,0 +1,32 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "Overview"
+  },
+  {
+    "type": "file",
+    "name": "building",
+    "label": "Building"
+  },
+  {
+    "type": "file",
+    "name": "submitting",
+    "label": "Submitting"
+  },
+  {
+    "type": "file",
+    "name": "screenshots",
+    "label": "Screenshots"
+  },
+  {
+    "type": "file",
+    "name": "monetization",
+    "label": "Monetization"
+  },
+  {
+    "type": "file",
+    "name": "cicd",
+    "label": "CI/CD"
+  }
+]

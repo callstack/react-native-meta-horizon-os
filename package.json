@@ -1,0 +1,21 @@
+{
+  "name": "react-native-meta-horizon-os-docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rspress build",
+    "check": "biome check --write",
+    "dev": "rspress dev",
+    "format": "biome format --write",
+    "preview": "rspress preview"
+  },
+  "dependencies": {
+    "@callstack/rspress-preset": "^0.5.1",
+    "@callstack/rspress-theme": "^0.5.1",
+    "@rspress/core": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.11",
+    "@types/node": "^22.8.1"
+  }
+}

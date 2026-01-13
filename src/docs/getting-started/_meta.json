@@ -1,0 +1,27 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "Overview"
+  },
+  {
+    "type": "file",
+    "name": "prerequisites",
+    "label": "Prerequisites"
+  },
+  {
+    "type": "file",
+    "name": "create-first-app",
+    "label": "Create Your First App"
+  },
+  {
+    "type": "file",
+    "name": "existing-app",
+    "label": "Add to Existing App"
+  },
+  {
+    "type": "file",
+    "name": "platform-guidelines",
+    "label": "Platform Guidelines"
+  }
+]

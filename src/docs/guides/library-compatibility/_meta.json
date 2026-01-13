@@ -1,0 +1,27 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "Overview"
+  },
+  {
+    "type": "file",
+    "name": "what-works",
+    "label": "What Works"
+  },
+  {
+    "type": "file",
+    "name": "alternatives",
+    "label": "Alternatives"
+  },
+  {
+    "type": "file",
+    "name": "what-doesnt-work",
+    "label": "What Doesn't Work"
+  },
+  {
+    "type": "file",
+    "name": "platform-detection",
+    "label": "Platform Detection"
+  }
+]

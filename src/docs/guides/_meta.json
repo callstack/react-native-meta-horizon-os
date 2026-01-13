@@ -1,0 +1,27 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "Overview"
+  },
+  {
+    "type": "dir",
+    "name": "library-compatibility",
+    "label": "Library Compatibility"
+  },
+  {
+    "type": "file",
+    "name": "ui-ux",
+    "label": "UI/UX"
+  },
+  {
+    "type": "dir",
+    "name": "releasing",
+    "label": "Releasing"
+  },
+  {
+    "type": "file",
+    "name": "testing",
+    "label": "Testing"
+  }
+]
