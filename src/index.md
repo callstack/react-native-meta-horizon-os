@@ -13,7 +13,7 @@ hero:
       text: GitHub
       link: https://github.com/callstack/react-native-meta-horizon-os
   image:
-    src: /rspress-icon.png
+    src: /meta-logo.svg
     alt: React Native Meta Horizon OS Logo
 features:
   - title: React Native Core
