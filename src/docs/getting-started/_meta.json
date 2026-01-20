@@ -16,11 +16,6 @@
   },
   {
     "type": "file",
-    "name": "existing-app",
-    "label": "Add to Existing App"
-  },
-  {
-    "type": "file",
     "name": "platform-guidelines",
     "label": "Platform Guidelines"
   }
