@@ -2,6 +2,7 @@
   "name": "react-native-meta-horizon-os-docs",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@9.12.2",
   "scripts": {
     "build": "rspress build",
     "check": "biome check --write",
