@@ -1,6 +1,6 @@
 # Library Compatibility
 
-Meta Horizon OS is based on Android but has important differences that affect library compatibility. This guide helps you understand what works, what needs configuration, and what requires alternatives.
+Meta VR OS is based on Android but has important differences that affect library compatibility. This guide helps you understand what works, what needs configuration, and what requires alternatives.
 
 ## Quick Reference
 
@@ -10,13 +10,13 @@ Meta Horizon OS is based on Android but has important differences that affect li
 | Self-contained libraries | ✅ Works | Libraries without external service dependencies |
 | Google Play Services | ❌ Not supported | Use Meta alternatives |
 | GPS hardware | ❌ Not available | WiFi/IP location only |
-| SMS/Telephony | ❌ Not available | Not supported on Quest |
+| SMS/Telephony | ❌ Not available | Not supported on Meta VR devices |
 
 ## Why Compatibility Differs
 
-Meta Horizon OS is built on AOSP (Android Open Source Project) but:
+Meta VR OS is built on AOSP (Android Open Source Project) but:
 
-- **No Google Mobile Services**: Quest doesn't include GMS
+- **No Google Mobile Services**: Meta VR devices don't include GMS
 - **VR-specific permissions**: Different permission model
 - **Missing hardware**: No GPS, cellular, or telephony hardware
 - **Custom APIs**: Meta provides VR-specific alternatives

@@ -7,7 +7,7 @@ Create production-ready builds for Meta Horizon Store submission.
 Ensure `expo-horizon-core` is installed and configured. This plugin:
 
 - Removes prohibited permissions
-- Configures Quest-specific build variants
+- Configures Meta VR-specific build variants
 - Sets Meta Horizon App ID
 - Ensures store compliance
 
@@ -31,7 +31,7 @@ Use Expo EAS for cloud builds:
 
 ### Configuration
 
-Add a Quest-specific profile to `eas.json`:
+Add a Meta VR-specific profile to `eas.json`:
 
 ```json
 {
@@ -63,7 +63,7 @@ After the build completes:
 
 `expo-horizon-core` provides two build variants:
 
-- **questDebug**: Development build for Quest
+- **questDebug**: Development build for Meta VR devices
 - **questRelease**: Production build for store submission
 
 ## Verification

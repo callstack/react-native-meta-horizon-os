@@ -1,10 +1,10 @@
 # Platform Guidelines
 
-Meta Horizon OS has specific requirements and differences from standard Android. Understanding these early helps avoid issues during development.
+Meta VR OS has specific requirements and differences from standard Android. Understanding these early helps avoid issues during development.
 
 ## Permissions
 
-Meta Horizon OS follows Android's permission model with VR-specific additions:
+Meta VR OS follows Android's permission model with VR-specific additions:
 
 - **Prohibited permissions**: Some Android permissions are not allowed. See [Meta's prohibited permissions list](https://developers.meta.com/horizon/resources/permissions-prohibited/)
 - **Extended permissions**: XR-specific permissions for spatial data. See [Meta's extended permissions](https://developers.meta.com/horizon/documentation/native/native-spatial-data-perm/)
@@ -64,7 +64,7 @@ Use `expo-horizon-core` plugin to automatically:
 - Remove prohibited permissions
 - Configure Android product flavors
 - Set Meta Horizon App ID
-- Provide Quest-specific utilities
+- Provide Meta VR-specific utilities
 
 ## Resources
 

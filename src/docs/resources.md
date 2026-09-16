@@ -1,6 +1,6 @@
 # Resources
 
-A collection of guides, articles, and media to help you build React Native apps for Meta Quest.
+A collection of guides, articles, and media to help you build React Native apps for Meta VR devices.
 
 [![React Native Developer's Guide to Horizon OS](/screenshots/Card.png)](https://www.callstack.com/ebooks/react-native-developers-guide-to-meta-horizon-os)
 

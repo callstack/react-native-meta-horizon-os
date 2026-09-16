@@ -10,9 +10,9 @@ export default withCallstackPreset(
   {
     context: __dirname,
     docs: {
-      title: "React Native Meta Horizon OS docs",
+      title: "React Native for Meta VR docs",
       description:
-        "Setup, develop, debug, and deploy React Native apps for Meta Quest",
+        "Setup, develop, debug, and deploy React Native apps for Meta VR devices",
       editUrl:
         "https://github.com/callstack/react-native-meta-horizon-os/edit/main/docs",
       // icon: '/logo.svg',

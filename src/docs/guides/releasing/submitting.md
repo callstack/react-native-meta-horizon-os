@@ -1,6 +1,6 @@
 # Submitting
 
-Submit your app to the Meta Horizon Store through Meta Developer Hub.
+Submit your app to the Meta Horizon Store through Meta Quest Developer Hub, or let [Expo Launch](#expo-launch) build and submit it for you.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ Submit your app to the Meta Horizon Store through Meta Developer Hub.
 
 ### 1. Complete Regulatory Requirements
 
-Before submission, complete all regulatory actions in the Meta Horizon Developer Dashboard:
+Before submission, complete all regulatory actions in the Meta VR Developer Dashboard:
 
 - Privacy policy
 - Content ratings
@@ -64,6 +64,12 @@ Once everything is complete:
 3. Submit for review
 
 **Review times**: Can take up to two weeks. Plan releases accordingly.
+
+## Expo Launch
+
+Use [Expo Launch](https://expo.dev/launch) to build and share your Expo app through Release Channels, or submit it to the Meta Horizon Store. Expo Launch takes your project, creates a production build, and guides you through the submission process.
+
+You must first create a new app in the Meta VR Developer Dashboard. Expo Launch prompts you for the App ID and secret, which are both available in the Developer Dashboard.
 
 ## Release Channels
 

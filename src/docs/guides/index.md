@@ -1,6 +1,6 @@
 # Guides
 
-Comprehensive guides for building React Native apps on Meta Horizon OS.
+Comprehensive guides for building React Native apps on Meta VR.
 
 ## Library Compatibility
 
