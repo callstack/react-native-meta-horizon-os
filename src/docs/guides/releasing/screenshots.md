@@ -71,5 +71,5 @@ Follow [Meta's asset guidelines](https://developers.meta.com/horizon/resources/a
 - **2D app view**: Best option for clean captures
 
 :::tip Meta Spatial Simulator
-[Meta Spatial Simulator](/docs/guides/testing#meta-spatial-simulator) runs 2D panel apps on your desktop without a physical device, and `metavr capture screenshot` saves what it shows. This can be useful for capturing screenshots during development.
+[Meta Spatial Simulator](https://developers.meta.com/horizon/blog/meta-spatial-simulator-android-horizon-os/) runs 2D panel apps on your desktop without a physical device, and `metavr capture screenshot` saves what it shows. This can be useful for capturing screenshots during development.
 :::

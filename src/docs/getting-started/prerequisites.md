@@ -4,7 +4,7 @@ Before you start developing React Native apps for Meta VR devices, ensure you ha
 
 ## Hardware
 
-- **Meta VR device**: Required for testing, though [Meta Spatial Simulator](/docs/guides/testing#meta-spatial-simulator) runs 2D panel apps on your desktop without a headset
+- **Meta VR device**: Required for testing, though [Meta Spatial Simulator](https://developers.meta.com/horizon/blog/meta-spatial-simulator-android-horizon-os/) runs 2D panel apps on your desktop without a headset
 - **Computer**: macOS, Windows, or Linux with USB connection
 
 ## Software
