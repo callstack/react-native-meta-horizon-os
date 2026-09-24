@@ -1,6 +1,6 @@
 # Getting Started
 
-This section will guide you through setting up your development environment and creating your first React Native app for Meta Quest.
+This section will guide you through setting up your development environment and creating your first React Native app for Meta VR devices.
 
 ## Quick start
 
@@ -9,7 +9,7 @@ This section will guide you through setting up your development environment and 
 
 ## What you'll learn
 
-- How to set up your Meta Quest device for development
+- How to set up your Meta VR device for development
 - How to create and run apps using Expo Go
 - How to transition to a development build
 - Key platform differences and requirements

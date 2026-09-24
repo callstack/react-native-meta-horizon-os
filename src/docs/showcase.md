@@ -1,12 +1,12 @@
 # Showcase App
 
-A React Native showcase app demonstrating what's possible on Meta Quest.
+A React Native showcase app demonstrating what's possible on Meta VR devices.
 
 ## Overview
 
-This showcase app proves React Native's viability for Meta Horizon OS development. Built in just two days, it demonstrates core capabilities and library compatibility.
+This showcase app proves React Native's viability for Meta VR development. Built in just two days, it demonstrates core capabilities and library compatibility.
 
-![Showcase App running on Meta Quest](/screenshots/showcase-app.webp)
+![Showcase App running on a Meta VR device](/screenshots/showcase-app.webp)
 
 ## Features
 
@@ -20,7 +20,7 @@ The app includes:
 
 ## What It Proves
 
-- React Native works seamlessly on Meta Quest
+- React Native works seamlessly on Meta VR devices
 - Development workflow is similar to mobile
 - Most libraries work without modification
 - Performance meets VR requirements
@@ -41,5 +41,5 @@ View the source code on GitHub:
 
 ## Featured at React Conf
 
-This showcase was featured at [React Conf 2025](https://www.youtube.com/live/p9OcztRyDl0?t=3365s), demonstrating React Native's capabilities on Meta Quest.
+This showcase was featured at [React Conf 2025](https://www.youtube.com/live/p9OcztRyDl0?t=3365s), demonstrating React Native's capabilities on Meta VR devices.
 

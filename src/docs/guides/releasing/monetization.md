@@ -40,7 +40,7 @@ npm install expo-iap
 
 ### Setup
 
-Follow the [expo-iap Horizon OS guide](https://hyochan.github.io/expo-iap/docs/getting-started/setup-horizon/).
+Follow the [expo-iap guide for Meta VR](https://hyochan.github.io/expo-iap/docs/getting-started/setup-horizon/).
 
 ### Example
 

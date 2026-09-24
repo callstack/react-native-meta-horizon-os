@@ -1,6 +1,6 @@
 # Create Your First App
 
-Get started quickly with Expo Go, which allows you to run React Native apps on Meta Quest without configuring a full development environment.
+Get started quickly with Expo Go, which allows you to run React Native apps on Meta VR devices without configuring a full development environment.
 
 ## Create a new Expo app
 
@@ -23,9 +23,9 @@ npx expo start
 
 Expo starts its development server and displays a QR code in your terminal.
 
-## Run on Meta Quest
+## Run on a Meta VR Device
 
-1. Put on your Meta Quest headset
+1. Put on your Meta VR headset
 2. Open Expo Go (installed from Meta Horizon Store)
 3. Grant camera permissions when prompted:
    - Approve access to virtual cameras
@@ -36,7 +36,7 @@ Once scanned, Expo Go launches your project in a floating VR window. Any edits y
 
 ## Essential Setup
 
-Some libraries require Quest-specific configuration before they work properly. The `expo-horizon-core` plugin is essential for Meta Quest apps.
+Some libraries require Meta VR-specific configuration before they work properly. The `expo-horizon-core` plugin is essential for Meta VR apps.
 
 ### expo-horizon-core Plugin
 
@@ -45,7 +45,7 @@ The `expo-horizon-core` plugin handles:
 - Removing prohibited Android properties
 - Configuring Android product flavors (`questRelease`, `questDebug`)
 - Setting Meta Horizon App ID
-- Providing Quest-specific JavaScript utilities
+- Providing Meta VR-specific JavaScript utilities
 - OS runtime detection
 
 ### Installation
@@ -108,11 +108,11 @@ Add to your `app.json`:
 
 See the [expo-horizon-core documentation](https://github.com/software-mansion-labs/expo-horizon/tree/main/expo-horizon-core) for details.
 
-After installing `expo-horizon-core`, your project is configured for Quest builds. You can now:
+After installing `expo-horizon-core`, your project is configured for Meta VR builds. You can now:
 
-- Build Quest-specific variants
-- Use Quest utilities like `isHorizonDevice()`
-- Access Quest-specific features
+- Build Meta VR-specific variants
+- Use Meta VR utilities like `isHorizonDevice()`
+- Access Meta VR-specific features
 
 ## Development Builds
 
@@ -135,7 +135,7 @@ Follow [Expo's setup instructions](https://docs.expo.dev/get-started/set-up-your
 
 1. Install the [Meta Horizon app](https://horizon.meta.com/) on your phone
 2. Enable developer mode following [Meta's guide](https://developers.meta.com/horizon/documentation/native/android/mobile-device-setup/)
-3. Connect your Quest via USB
+3. Connect your Meta VR device via USB
 4. Approve USB debugging when prompted on the headset
 
 #### 3. Start Development Server
@@ -150,7 +150,7 @@ Ensure you're running in "development build" mode. If not, press `s` in the term
 
 #### 4. Connect Your Device
 
-When you connect Meta Quest for the first time, you'll see a prompt:
+When you connect a Meta VR device for the first time, you'll see a prompt:
 
 **"Allow USB debugging?"**
 
@@ -165,9 +165,9 @@ Your terminal should show "development build" mode. You now have access to:
 - Platform-level debugging
 - ADB logs and profiling tools
 
-## Building for Quest
+## Building for Meta VR
 
-Use Quest-specific build variants:
+Use the `quest` build variants:
 
 ```bash
 # Development build
@@ -179,12 +179,12 @@ npx expo run:android --variant questRelease
 
 ### Platform Detection
 
-Use `expo-horizon-core` to detect Quest devices:
+Use `expo-horizon-core` to detect Meta VR devices:
 
 ```tsx
 import ExpoHorizon from 'expo-horizon-core';
 
 if (ExpoHorizon.isHorizonDevice) {
-  // Quest-specific code
+  // Meta VR-specific code
 }
 ```

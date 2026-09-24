@@ -6,7 +6,7 @@ High-quality screenshots are essential for your store listing. Capturing them in
 
 Use [Meta Quest Developer Hub](https://developers.meta.com/horizon/documentation/native/android/ts-mqdh/) for consistent screenshots:
 
-1. **Connect device**: Connect Quest via USB and find your device under "Device Manager"
+1. **Connect device**: Connect your Meta VR device via USB and find your device under "Device Manager"
 
 ![Connect your device via USB](/screenshots/connect-device.webp)
 
@@ -48,7 +48,7 @@ For best results, use the 2D app view:
 
 ## Inspiration
 
-Look at successful Quest apps for inspiration:
+Look at successful Meta VR apps for inspiration:
 
 - [Instagram](https://www.meta.com/en-gb/experiences/instagram/6894135610696226/)
 - [WhatsApp](https://www.meta.com/en-gb/experiences/whatsapp/5885952088153609/)
@@ -71,5 +71,5 @@ Follow [Meta's asset guidelines](https://developers.meta.com/horizon/resources/a
 - **2D app view**: Best option for clean captures
 
 :::tip Meta Spatial Simulator
-[Meta Spatial Simulator](https://developers.meta.com/horizon/blog/meta-spatial-simulator-android-horizon-os/) (Beta) allows testing 2D panel apps directly from Android Studio without a physical device. This can be useful for capturing screenshots during development.
+[Meta Spatial Simulator](https://developers.meta.com/horizon/blog/meta-spatial-simulator-android-horizon-os/) runs 2D panel apps on your desktop without a physical device, and `metavr capture screenshot` saves what it shows. This can be useful for capturing screenshots during development.
 :::

@@ -1,6 +1,6 @@
 # What Works
 
-Most React Native libraries work seamlessly on Meta Horizon OS if they're self-contained and don't depend on restricted services.
+Most React Native libraries work seamlessly on Meta VR if they're self-contained and don't depend on restricted services.
 
 ## Core Expo Libraries
 
@@ -26,7 +26,7 @@ Most React Native libraries work without modification:
 
 ## Rule of Thumb
 
-**If a library is self-contained and doesn't depend on external services or restricted hardware, it should work on Meta Horizon OS.**
+**If a library is self-contained and doesn't depend on external services or restricted hardware, it should work on Meta VR.**
 
 ## Examples
 

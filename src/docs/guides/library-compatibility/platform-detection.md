@@ -1,6 +1,6 @@
 # Platform Detection
 
-Detect Meta Quest devices to conditionally run platform-specific code.
+Detect Meta VR devices to conditionally run platform-specific code.
 
 ## Using expo-horizon-core
 
@@ -10,7 +10,7 @@ The `expo-horizon-core` package provides device detection:
 import ExpoHorizon from 'expo-horizon-core';
 
 if (ExpoHorizon.isHorizonDevice) {
-  // Quest-specific code
+  // Meta VR-specific code
 }
 ```
 
@@ -52,7 +52,7 @@ function MyComponent() {
 
 ## Conditional Styling
 
-Adjust styles for Quest:
+Adjust styles for Meta VR devices:
 
 ```tsx
 import { StyleSheet } from 'react-native';
@@ -77,7 +77,7 @@ import * as SMS from 'expo-sms';
 
 const isAvailable = await SMS.isAvailableAsync();
 if (isAvailable) {
-  // SMS is available (not on Quest)
+  // SMS is available (not on Meta VR devices)
 }
 ```
 
@@ -121,4 +121,4 @@ export function getPlatformName() {
 - **Check at runtime**: Don't assume platform at build time
 - **Graceful degradation**: Provide fallbacks for unsupported features
 - **Clear error messages**: Inform users when features aren't available
-- **Test on device**: Always test platform detection on actual Quest hardware
+- **Test on device**: Always test platform detection on actual Meta VR hardware

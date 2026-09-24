@@ -1,10 +1,10 @@
 # What Doesn't Work
 
-Some features and libraries are not supported on Meta Horizon OS.
+Some features and libraries are not supported on Meta VR.
 
 ## Mobile-Specific Hardware
 
-These hardware features don't exist on Quest:
+These hardware features don't exist on Meta VR devices:
 
 - **SMS**: No cellular connectivity
 - **Telephony**: No phone calling capabilities
@@ -12,7 +12,7 @@ These hardware features don't exist on Quest:
 
 ## Google Mobile Services
 
-Meta Horizon OS doesn't include Google Mobile Services (GMS). Libraries that depend on GMS won't work:
+Meta VR OS doesn't include Google Mobile Services (GMS). Libraries that depend on GMS won't work:
 
 ### Google Services
 
@@ -33,7 +33,7 @@ See [Firebase documentation](https://firebase.google.com/docs/android/android-pl
 
 ## Restricted Permissions
 
-Some Android permissions are prohibited on Meta Horizon OS:
+Some Android permissions are prohibited on Meta VR OS:
 
 - **Dangerous permissions**: `INSTALL_PACKAGES`, etc.
 - **Irrelevant permissions**: `CALL_PHONE`, etc.
@@ -62,5 +62,5 @@ Before adding a library:
 
 1. Check if it depends on Google Play Services
 2. Verify it doesn't require prohibited permissions
-3. Test on a Quest device
-4. Look for Quest-specific alternatives
+3. Test on a Meta VR device
+4. Look for Meta VR-specific alternatives

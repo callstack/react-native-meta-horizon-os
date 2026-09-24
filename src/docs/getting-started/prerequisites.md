@@ -1,10 +1,10 @@
 # Prerequisites
 
-Before you start developing React Native apps for Meta Quest, ensure you have the following:
+Before you start developing React Native apps for Meta VR devices, ensure you have the following:
 
 ## Hardware
 
-- **Meta Quest device**: Required for testing, though [Meta Spatial Simulator](https://developers.meta.com/horizon/blog/meta-spatial-simulator-android-horizon-os/) (Beta) allows testing 2D panel apps without a headset
+- **Meta VR device**: Required for testing, though [Meta Spatial Simulator](https://developers.meta.com/horizon/blog/meta-spatial-simulator-android-horizon-os/) runs 2D panel apps on your desktop without a headset
 - **Computer**: macOS, Windows, or Linux with USB connection
 
 ## Software
@@ -30,11 +30,11 @@ For development builds, you'll need:
 
 Follow [Expo's setup guide](https://docs.expo.dev/get-started/set-up-your-environment/?mode=development-build&buildEnv=local) for Android devices.
 
-## Meta Quest Setup
+## Meta VR Device Setup
 
 ### Install Expo Go
 
-Install [Expo Go](https://www.meta.com/experiences/expo-go/25322546364000780/) from the Meta Horizon Store on your Quest device.
+Install [Expo Go](https://www.meta.com/experiences/expo-go/25322546364000780/) from the Meta Horizon Store on your Meta VR device.
 
 ### Enable Developer Mode
 
@@ -42,7 +42,7 @@ For development builds, enable developer mode:
 
 1. Install the [Meta Horizon app](https://horizon.meta.com/) on your phone
 2. Follow [Meta's instructions](https://developers.meta.com/horizon/documentation/android-apps/enable-developer-mode) to enable developer mode
-3. Connect your Quest via USB and approve USB debugging
+3. Connect your Meta VR device via USB and approve USB debugging
 
 ## Accounts
 

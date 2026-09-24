@@ -1,18 +1,18 @@
 # Alternatives
 
-Some features require Quest-specific packages that provide the same APIs as their mobile counterparts.
+Some features require Meta VR-specific packages that provide the same APIs as their mobile counterparts.
 
 ## In-App Purchases
 
 ### expo-iap
 
-The `expo-iap` library supports Meta Horizon OS billing:
+The `expo-iap` library supports billing on Meta VR devices:
 
 ```bash
 npm install expo-iap
 ```
 
-Follow the [expo-iap Horizon OS setup guide](https://hyochan.github.io/expo-iap/getting-started/setup-horizon).
+Follow the [expo-iap setup guide for Meta VR](https://hyochan.github.io/expo-iap/getting-started/setup-horizon).
 
 ### Use Cases
 
@@ -63,13 +63,13 @@ Notifications.setNotificationHandler({
 Notifications.scheduleNotificationAsync({
   content: {
     title: 'Notification!',
-    body: 'It works on Meta Horizon OS!',
+    body: 'It works on Meta VR!',
   },
   trigger: null,
 });
 ```
 
-**Note**: Expo Push Service is not supported on Meta Quest.
+**Note**: Expo Push Service is not supported on Meta VR devices.
 
 ## Location Services
 
@@ -83,7 +83,7 @@ npm install expo-horizon-location
 
 ### Important Limitation
 
-Meta Quest devices don't have GPS hardware. Location is determined through:
+Meta VR devices don't have GPS hardware. Location is determined through:
 
 - WiFi networks
 - IP geolocation

@@ -1,6 +1,6 @@
 # Testing
 
-Testing React Native apps for Meta Horizon OS follows the same principles as testing any React Native application. This guide covers recommended tools and practices for writing maintainable, reliable tests.
+Testing React Native apps for Meta VR follows the same principles as testing any React Native application. This guide covers recommended tools and practices for writing maintainable, reliable tests.
 
 ## Philosophy
 
@@ -165,9 +165,94 @@ For large applications, prioritize tests by user impact:
 
 Don't aim for 100% code coverage. Focus on meaningful coverage of user-facing functionality.
 
+## Meta Spatial Simulator
+
+Meta Spatial Simulator runs your app as a panel on your desktop, so you can test without loading a build onto a headset every time.
+
+### Requirements
+
+| | Minimum |
+|---|---|
+| macOS | Apple silicon (M1 or later), macOS 12+, Xcode Command Line Tools (`xcode-select --install`) |
+| Windows | Windows 10+, 64-bit, 8+ cores, hardware virtualisation enabled in BIOS |
+| GPU | Vulkan-capable, with current drivers |
+| Disk space | 8 GB free |
+| Memory | 4 GB free |
+| Android SDK | `platform-tools` (for `adb`) and `emulator` |
+
+Your app must target API 34 (Android 14) or later.
+
+### Install Meta VR CLI
+
+[Meta VR CLI](https://developers.meta.com/horizon/documentation/android-apps/ts-ai-tooling-mcp/) (`metavr`) manages devices, logs, screenshots and Meta Spatial Simulator.
+
+```bash
+# macOS / Linux
+curl -fsSL https://developers.meta.com/horizon/install-cli/ | sh
+
+# Windows (PowerShell)
+iwr -useb https://developers.meta.com/horizon/install-cli/windows/ | iex
+```
+
+With Node.js 18 or later you can run it through npm instead:
+
+```bash
+npx metavr@latest init
+```
+
+Verify the install and check what developer software it found:
+
+```bash
+metavr --version
+metavr doctor
+```
+
+### Install and start the simulator
+
+Once you have installed Meta VR CLI, you can start the simulator:
+
+```bash
+metavr tools install spatialsim
+metavr ssim start
+metavr ssim status
+```
+
+### Run your app
+
+`metavr` does not build your app. Build the APK with Expo first, then deploy it:
+
+```bash
+npx expo run:android --variant questDebug
+metavr app install android/app/build/outputs/apk/quest/debug/app-quest-debug.apk
+metavr app launch <your.package.name>
+```
+
+Your app appears as a panel. Click UI elements, type into text fields, and scroll with your mouse wheel or trackpad.
+
+### Capture a screenshot
+
+```bash
+metavr capture screenshot -o app.png
+```
+
+### Targeting a specific device
+
+If a headset or phone is connected at the same time, commands fail with `Multiple devices connected`. List what is attached and pin the target with `-d`:
+
+```bash
+metavr device list
+metavr -d emulator-5554 capture screenshot -o app.png
+```
+
+### Troubleshooting
+
+- Allow up to five minutes on first boot.
+- The simulator does not include Google Play services, so an app that depends on GMS will not run.
+- If `adb` cannot see the simulator, restart the server with `adb kill-server && adb start-server`.
+
 ## End-to-End Testing
 
-For full end-to-end testing of your app running on Meta Horizon OS, you can use [Maestro](https://maestro.dev/) — an open-source UI testing framework that supports React Native apps. With the Meta Spatial Simulator, Maestro can automate user flows by interacting with your app just like a real user would: tapping elements, entering text, and validating screen content.
+For full end-to-end testing of your app running on Meta VR devices, you can use [Maestro](https://maestro.dev/) — an open-source UI testing framework that supports React Native apps. With the Meta Spatial Simulator, Maestro can automate user flows by interacting with your app just like a real user would: tapping elements, entering text, and validating screen content.
 
 [Maestro Studio](https://docs.maestro.dev/getting-started/maestro-studio-desktop) provides a visual IDE for building tests without writing code, while the CLI integrates seamlessly into CI pipelines. Since the testing workflow is standard across all React Native platforms, refer to the official Maestro documentation for setup and usage instructions.
 

@@ -1,6 +1,6 @@
 # UI/UX for VR
 
-Designing for VR requires different considerations than mobile. This guide covers the key differences and how to adapt your React Native UI for Meta Quest.
+Designing for VR requires different considerations than mobile. This guide covers the key differences and how to adapt your React Native UI for Meta VR devices.
 
 ## Key Differences
 
@@ -12,7 +12,7 @@ Designing for VR requires different considerations than mobile. This guide cover
 
 ## Windowing & Layout
 
-On Meta Quest, apps run in resizable windows that users can move and resize. Your layout must adapt to these changes.
+On Meta VR devices, apps run in resizable windows that users can move and resize. Your layout must adapt to these changes.
 
 ![Window frame with resize handles](https://cdn.prod.website-files.com/67e6c26f2d676c1963e098b9/69368220bed6d7d373964e94_Window%20frame%20with%20resize%20handles.webp)
 
@@ -96,6 +96,56 @@ useEffect(() => {
 
 For complex responsive layouts, consider [Unistyles V3](https://www.unistyl.es/v3/references/media-queries) which supports media queries and breakpoints.
 
+## Meta VR Layout SDK
+
+On Meta VR devices your app is not limited to a single panel. The Meta VR Layout SDK lets you declare additional spatial windows as React components, and the system places them around your main panel.
+
+The same component tree works on both form factors: on Meta VR devices a `SpatialWindow` is promoted to its own panel, and on mobile, or when a window cannot be placed, it renders inline where you declared it. You do not write a platform check.
+
+### Installation
+
+```bash
+npm install @metavr/layout-compat @metavr/layout-window-compat
+```
+
+`@metavr/layout-window-compat` depends on `@metavr/layout-compat`. Manifest entries are merged automatically; there is nothing to add to `app.json` beyond your existing `expo-horizon-core` config. Rebuild after installing:
+
+```bash
+npx expo prebuild --clean
+npm run quest
+```
+
+### Usage
+
+Wrap your app in `SpatialSceneProvider`, then wrap any subtree you want promoted in a `SpatialWindow`:
+
+```tsx
+import { SpatialSceneProvider } from '@metavr/layout-compat';
+import { SpatialWindow } from '@metavr/layout-window-compat';
+
+export default function App() {
+  return (
+    <SpatialSceneProvider>
+      <TrackList />
+      <SpatialWindow key="now-playing">
+        <NowPlaying />
+      </SpatialWindow>
+    </SpatialSceneProvider>
+  );
+}
+```
+
+`<NowPlaying />` is your existing component, unchanged. State stays in whatever store you already use and is shared across the main panel and the child window: they are one React tree.
+
+Use `useSpatialWindowState` to react to what actually happened to a window. Placement resolves to `spatial` (promoted to its own panel), `pending`, or `dropped`.
+
+### Things to know
+
+- **Fallback is inline by default** in React Native. If a window can't be promoted, its content renders where it was declared rather than disappearing.
+- **Spatial promotion requires Horizon OS v207 or later.** On earlier versions everything falls back inline, which is why the fallback path is worth testing.
+- **Windows can't be nested.** A `SpatialWindow` inside another `SpatialWindow` will never promote.
+- **There's a cap** on how many windows can be promoted at once. Design for the fallback.
+
 ## Styling
 
 Styling in VR affects comfort and readability. Follow these guidelines for typography, icons, colors, and spacing.
@@ -112,7 +162,7 @@ Styling in VR affects comfort and readability. Follow these guidelines for typog
 
 **Font selection:**
 - Use **sans-serif** fonts with high x-height
-- **Inter** (used in Meta Horizon OS UI) is a good default
+- **Inter** (used in the Meta VR system UI) is a good default
 - Avoid very thin weights
 - Use Regular, Medium, and Bold weights
 
@@ -340,11 +390,11 @@ VR sessions are typically shorter than mobile:
 - [ ] Controls are simple
 - [ ] Head movement is minimized
 
-Use Meta Quest [accessibility settings](https://www.meta.com/en-gb/help/quest/674999931400954/) and React Native DevTools for testing.
+Use the Meta VR device [accessibility settings](https://www.meta.com/en-gb/help/quest/674999931400954/) and React Native DevTools for testing.
 
 ## Navigation
 
-Meta Quest doesn't have a universal system back button. Your app must provide in-app navigation controls.
+Meta VR devices don't have a universal system back button. Your app must provide in-app navigation controls.
 
 ### In-App Back Controls
 
