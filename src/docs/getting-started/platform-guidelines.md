@@ -36,7 +36,6 @@ See [UI/UX Guide](/docs/guides/ui-ux) for detailed design guidelines.
 
 ### Navigation
 
-- No system back button - provide in-app navigation
 - Include visible back controls when needed
 - Support both controllers and hand tracking
 
@@ -52,7 +51,7 @@ See [UI/UX Guide](/docs/guides/ui-ux) for detailed design guidelines.
 
 - Google Mobile Services (GMS) dependencies
 - Firebase modules tied to GMS
-- Mobile-specific hardware (SMS, telephony, GPS hardware)
+- Mobile-specific features (SMS, telephony, fine location access)
 - Libraries requiring Google Play Services
 
 See [Library Compatibility Guide](/docs/guides/library-compatibility) for details.
@@ -68,6 +67,6 @@ Use `expo-horizon-core` plugin to automatically:
 
 ## Resources
 
-- [Meta Horizon Design Guidelines](https://developers.meta.com/horizon/design/mr-design-guideline/)
 - [Design Requirements](https://developers.meta.com/horizon/documentation/android-apps/design-requirements)
+- [Media Requirements for Streaming Apps](https://developers.meta.com/horizon/documentation/android-apps/media-requirements/)
 - [Making Apps Compatible](https://developers.meta.com/horizon/documentation/android-apps/making-apps-compatible-overview)

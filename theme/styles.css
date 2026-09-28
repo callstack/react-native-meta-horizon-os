@@ -1,0 +1,3 @@
+.rp-doc a.rp-link:not(.rp-header-anchor, .rp-not-doc, .rp-not-doc *) {
+  border-bottom: 1px solid var(--rp-c-brand);
+}

@@ -184,7 +184,13 @@ Your app must target API 34 (Android 14) or later.
 
 ### Install Meta VR CLI
 
-[Meta VR CLI](https://developers.meta.com/horizon/documentation/android-apps/ts-ai-tooling-mcp/) (`metavr`) manages devices, logs, screenshots and Meta Spatial Simulator.
+[Meta VR CLI](https://developers.meta.com/horizon/documentation/android-apps/ts-ai-tooling-mcp/) (`metavr`) manages devices, logs, screenshots and Meta Spatial Simulator. With Node.js 18 or later, run it through npm:
+
+```bash
+npx metavr@latest init
+```
+
+With npx, run each command as `npx metavr@latest <command>`. To use the bare `metavr` command shown below, install it globally with `npm install -g metavr` or use the native installer:
 
 ```bash
 # macOS / Linux
@@ -192,12 +198,6 @@ curl -fsSL https://developers.meta.com/horizon/install-cli/ | sh
 
 # Windows (PowerShell)
 iwr -useb https://developers.meta.com/horizon/install-cli/windows/ | iex
-```
-
-With Node.js 18 or later you can run it through npm instead:
-
-```bash
-npx metavr@latest init
 ```
 
 Verify the install and check what developer software it found:

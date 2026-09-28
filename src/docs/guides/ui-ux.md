@@ -8,7 +8,7 @@ Designing for VR requires different considerations than mobile. This guide cover
 - **Controller input**: Touch is replaced by pointer/hover interactions
 - **Spatial context**: Content floats in 3D space
 - **Comfort**: Readability and ergonomics are critical
-- **No system UI**: No back button, different navigation patterns
+- **Navigation**: System back is in the control bar below the window; add in-app back controls where users need them
 
 ## Windowing & Layout
 
@@ -18,7 +18,7 @@ On Meta VR devices, apps run in resizable windows that users can move and resize
 
 ### Window Behavior
 
-- **Default size**: ~1000 × 625 pixels
+- **Default size**: 1024 × 640 dp
 - **Resizable**: Users can resize windows dynamically
 - **Movable**: Windows can be repositioned in 3D space
 - **Responsive**: Layout must adapt to size changes
@@ -394,11 +394,11 @@ Use the Meta VR device [accessibility settings](https://www.meta.com/en-gb/help/
 
 ## Navigation
 
-Meta VR devices don't have a universal system back button. Your app must provide in-app navigation controls.
+The system back button sits in the control bar below the app window, and it isn't available across all input modalities. Add back controls to your app's UI when users need them.
 
 ### In-App Back Controls
 
-Unlike mobile platforms, you must:
+We recommend that you:
 - Include in-app back controls
 - Provide clear navigation paths
 - Support both controllers and hand tracking
@@ -462,7 +462,6 @@ function NavigationButton() {
 
 ## Resources
 
-- [Meta Horizon Design Guidelines](https://developers.meta.com/horizon/design/mr-design-guideline/)
 - [Design Requirements](https://developers.meta.com/horizon/documentation/android-apps/design-requirements)
 - [Meta Comfort Guidelines](https://developers.meta.com/horizon/design/comfort)
 - [Meta Accessibility Documentation](https://developers.meta.com/horizon/design/accessibility)
